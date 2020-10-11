@@ -1,0 +1,132 @@
+//colors
+$color_gin_fizz_approx: cornsilk;
+$color_mine_shaft_approx: #333;
+$steel_blue: steelblue;
+$white: white;
+$color_dew_approx: azure;
+$color_granny_smith_apple_approx: lightgreen;
+$wheat: wheat;
+$color_apple_approx: limegreen;
+
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+
+* {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font_0, $font_1;
+	font-size: 16px;
+	background: $color_gin_fizz_approx;
+	color: $color_mine_shaft_approx;
+}
+a {
+	text-decoration: none;
+}
+.button {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	display: inline-block;
+	background: $steel_blue;
+	color: $white;
+	font-size: 12px;
+	font-weight: bold;
+}
+.container {
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+}
+.header {
+	overflow: hidden;
+	height: 65px;
+	a {
+		color: inherit;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+.header-logo {
+	float: left;
+}
+.header-nav {
+	float: right;
+	ul li {
+		display: inline-block;
+		margin: 0 20px;
+	}
+}
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 310px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+	background: $color_dew_approx;
+	span {
+		font-weight: bold;
+	}
+}
+.product-add-to-cart {
+	overflow: hidden;
+	clear: both;
+	margin-top: 10px;
+}
+.see-more {
+	float: left;
+	background: $color_granny_smith_apple_approx;
+}
+.add-to-cart {
+	float: right;
+}
+.shopping-cart {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 300px;
+	min-heigh: 300px;
+	margin-right: 20px;
+	margin-top: 10px;
+	padding: 20px;
+	background: $wheat;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+}
+.shopping-cart-head {
+	background: $steel_blue;
+	color: $white;
+	padding: 5px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 5px;
+}
+.empty-cart-btn {
+	display: none;
+	margin-bottom: 5px;
+}
+.cart-checkout {
+	display: none;
+	background: $color_apple_approx;
+}
+.product-image img {
+	display: block;
+	max-width: 228px;
+	width: 100%;
+	margin: 0 auto;
+}
+..row .product:last-child {
+	margin-right: 0;
+}
